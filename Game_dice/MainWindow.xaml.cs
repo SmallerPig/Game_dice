@@ -22,13 +22,26 @@ namespace Game_dice
         int x = 8;
         int y = 8;
 
+        IList<IList<Class.Box>> boxs;
+
+
         public MainWindow()
         {
             InitializeComponent();
-            initRectangle();
+            boxs = initRectangle();
             initLife();
+            DrawCanvas();
+        }
 
-
+        private void DrawCanvas()
+        {
+            foreach (var column in boxs) 
+            {
+                foreach (var box in column)
+                {
+                    box.Draw(this.MainCanvas);
+                }
+            }
         }
 
 
@@ -44,15 +57,20 @@ namespace Game_dice
         /// <summary>
         /// 初始化8*8的格子
         /// </summary>
-        void initRectangle(){
+        IList<IList<Class.Box>> initRectangle()
+        {
+            IList<IList<Class.Box>> result = new List<IList<Class.Box>>();
             for (int i = 0; i < x; i++)
             {
+                IList<Class.Box> column = new List<Class.Box>();
                 for (int j = 0; j < y; j++)
                 {
-                    Interface.IDrawable box = new Class.Box(10, 5, i, j);
-                    box.Draw(this.MainCanvas);
+                    Class.Box box = new Class.Box(10, 5, i, j);
+                    column.Add(box);
                 }
+                result.Add(column);
             }
+            return result;
         }
 
         /// <summary>
@@ -63,5 +81,13 @@ namespace Game_dice
 
         }
 
+        /// <summary>
+        /// 清除画布中所有元素
+        /// </summary>
+        void ClearCanvas()
+        {
+            this.MainCanvas.Children.Clear();
+        }
+        
     }
 }
