@@ -38,13 +38,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xaml">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -64,7 +60,8 @@
     </Compile>
     <Compile Include="Class\Box.cs" />
     <Compile Include="Class\Life.cs" />
-    <Compile Include="Class\Line.cs" />
+    <Compile Include="Class\Track.cs" />
+    <Compile Include="Class\Point.cs" />
     <Compile Include="Class\Shape.cs" />
     <Compile Include="Interface\IDrawable.cs" />
     <Compile Include="Interface\IRuinable.cs" />

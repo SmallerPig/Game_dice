@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Game_dice")]
-[assembly: AssemblyCopyright("WuXiSourceCode etc Copyright ©  2014")]
+[assembly: AssemblyCopyright("WuXiSourceCode inc Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -17,12 +17,13 @@ namespace Game_dice.Class
         int LocationY;
         int R = 50;
 
-        public Box(int redBeginNum,int greenBeginNum, int x,int y)
+        public Box(int redBeginNum,int greenBeginNum, int x,int y,int r=50)
         {
             RedBeginNum = redBeginNum;
             GreenBeginNum = greenBeginNum;
             this.LocationX = x;
             this.LocationY = y;
+            this.R = r;
         }
 
         private BoxStatus Status { get; set; }
